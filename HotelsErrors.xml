@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Root element (intentionally wrong: should be <Hotels> based on the XSD) -->
 <Hotel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="https://YourGitHubUsername.github.io/YourRepoName/Hotels.xsd">
+        xsi:noNamespaceSchemaLocation="https://almakhlifi.github.io/CSE445-A4/Hotels.xsd">
   
-  <!-- Error 1: nested <Hotel> inside root <Hotel> -->
   <Hotel Rating="4.2">
-    <!-- Hotel name -->
     <Name>Westin</Name>
-    <!-- Error 2: Address is missing required NearestAirport attribute -->
     <Address>
       <Number>11</Number>
       <Street>E.7th St</Street>
@@ -17,24 +13,19 @@
     </Address>
   </Hotel>
   
-  <!-- Hotel with some correct parts but also an error -->
   <Hotel>
     <Name>Example Hotel Inn</Name>
     <Phone>123-456-7890</Phone>
-    <!-- This one has the required NearestAirport attribute -->
     <Address NearestAirport="Example Airport">
       <Number>100</Number>
       <Street>Main St</Street>
       <City>Anytown</City>
       <State>CA</State>
       <Zip>12345</Zip>
-    <!-- Error 3: Address element not closed before closing Hotel -->
     </Hotel>
   
-  <!-- Hotel with duplicate element error -->
   <Hotel Rating="5.0">
     <Name>Grand Hotel</Name>
-    <!-- Error 4: duplicate Name element not allowed by schema -->
     <Name>Duplicate Name Error</Name>
     <Phone>987-654-3210</Phone>
     <Address NearestAirport="Grand Airport">
@@ -46,5 +37,4 @@
     </Address>
   </Hotel>
   
-  <!-- Error 5: extra closing root tag / structure problem -->
   </Hotel>

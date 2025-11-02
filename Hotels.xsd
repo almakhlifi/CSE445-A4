@@ -1,45 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Define the XML Schema -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-  <!-- Root element: collection of hotels -->
   <xs:element name="Hotels">
     <xs:complexType>
       <xs:sequence>
-        
-        <!-- One or more Hotel elements -->
         <xs:element name="Hotel" minOccurs="1" maxOccurs="unbounded">
           <xs:complexType>
             <xs:sequence>
-              
-              <!-- Hotel name -->
               <xs:element name="Name" type="xs:string" />
-              
-              <!-- One or more phone numbers -->
               <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
-              
-              <!-- Address information -->
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
-                    <!-- Street number -->
                     <xs:element name="Number" type="xs:int" />
-                    <!-- Street name -->
                     <xs:element name="Street" type="xs:string" />
-                    <!-- City name -->
                     <xs:element name="City" type="xs:string" />
-                    <!-- State name/abbreviation -->
                     <xs:element name="State" type="xs:string" />
-                    <!-- ZIP code -->
                     <xs:element name="Zip" type="xs:int" />
                   </xs:sequence>
-                  <!-- Nearest airport is required -->
                   <xs:attribute name="NearestAirport" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            
-            <!-- Optional rating for the hotel -->
             <xs:attribute name="Rating" type="xs:decimal" use="optional" />
           </xs:complexType>
         </xs:element>

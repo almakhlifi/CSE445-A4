@@ -15,7 +15,7 @@
     </Address>
   </Hotel>
   
-  <Hotel>
+  <Hotel Rating="3.8">
     <Name>Example Hotel Inn</Name>
     <Phone>123-456-7890</Phone>
     <Address NearestAirport="Example Airport">
@@ -26,5 +26,5 @@
       <Zip>12345</Zip>
     </Address>
   </Hotel>
-  
-  </Hotels>
+
+</Hotels>
